@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Project - Mod Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Create New Project</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="logout.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <form action="/create_project" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="project-icon">Project Icon</label>
+          <input type="file" id="project-icon" name="project_icon" accept="image/*" required>
+        </div>
+        <div class="form-group">
+          <label for="project-name">Project Name</label>
+          <input type="text" id="project-name" name="project_name" required>
+        </div>
+        <div class="form-group">
+          <label for="project-version">Version</label>
+          <input type="text" id="project-version" name="project_version" required>
+        </div>
+        <div class="form-group">
+          <label for="project-description">Description</label>
+          <textarea id="project-description" name="project_description" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="project-tags">Tags (comma separated)</label>
+          <input type="text" id="project-tags" name="project_tags">
+        </div>
+        <div class="form-group">
+          <label for="project-mods">Select Mods</label>
+          <select id="project-mods" name="project_mods[]" multiple>
+            <option value="mod1">Mod 1</option>
+            <option value="mod2">Mod 2</option>
+            <option value="mod3">Mod 3</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="project-modpack">Modpack</label>
+          <select id="project-modpack" name="project_modpack">
+            <option value="">Select a Modpack</option>
+            <option value="modpack1">Modpack 1</option>
+            <option value="modpack2">Modpack 2</option>
+            <option value="modpack3">Modpack 3</option>
+          </select>
+        </div>
+        <button type="submit">Create Project</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Mod Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>
